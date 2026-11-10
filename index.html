@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: rgb(21, 41, 7)">
+    <p>My Assignment</p>
+    <!-- a. area of a triangle right angled tri... 1/2 * (height * base) sin 90 -->
+    <input
+      placeholder="Trangle Height"
+      style="display: block; border: 2px solid red; width: 100px; height: 20px; "
+      type="number"
+      name=""
+      id="height"
+    />
+    <input
+      placeholder="Trangle base"
+      style="border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      name=""
+      id="base"
+    />
+    <div
+      style="
+        background-color: whitesmoke;
+        width: 100px;
+        height: 20px;
+        margin-top: 20px;
+      "
+      id="display"
+    ></div>
+    <button onclick="show()">Solve</button>
+
+    <!-- b. area of a square -->
+    <input
+      style="display: block;margin-top:20px; border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      name=""
+      id="lenght"
+      placeholder="Lenght of Square"
+    />
+    <input
+      style="border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      name=""
+      id="breath"
+      placeholder="breath of Square"
+    />
+    <div
+      style="
+        background-color: whitesmoke;
+        width: 100px;
+        height: 20px;
+        margin-top: 20px;
+      "
+      id="squareDisplay"
+    ></div>
+    <button onclick="square()">Solve</button>
+
+    <!-- c. area of a circle -->
+    <input
+      style="display: block; margin-top:20px; border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      id="circleRadius"
+      placeholder="Radius"
+    />
+    <div
+      style="background-color: whitesmoke; width: 100px; height: 20px; margin-top: 20px;"
+      id="circleDisplay"
+    ></div>
+    <button onclick="circle()">Solve</button>
+
+    <!-- d. area of a Quadrilateral (Kite) -->
+    <input
+      style="display: block; margin-top:20px; border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      id="quadDiag1"
+      placeholder="1st Diagonal"
+    />
+    <input
+      style="border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      id="quadDiag2"
+      placeholder="2nd Diagonal"
+    />
+    <div
+      style="background-color: whitesmoke; width: 100px; height: 20px; margin-top: 20px;"
+      id="quadDisplay"
+    ></div>
+    <button onclick="quadrilateral()">Solve</button>
+
+    <!-- e. area of a Rhombus -->
+    <input
+      style="display: block; margin-top:20px; border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      id="rhomDiag1"
+      placeholder="Vertical Diag"
+    />
+    <input
+      style="border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      id="rhomDiag2"
+      placeholder="Horiz Diag"
+    />
+    <div
+      style="background-color: whitesmoke; width: 100px; height: 20px; margin-top: 20px;"
+      id="rhomDisplay"
+    ></div>
+    <button onclick="rhombus()">Solve</button>
+
+    <!-- f. area of a Trapezium -->
+    <input
+      style="display: block; margin-top:20px; border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      id="trapTop"
+      placeholder="Parallel Top"
+    />
+    <input
+      style="border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      id="trapBottom"
+      placeholder="Parallel Btm"
+    />
+    <input
+      style="border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      id="trapHeight"
+      placeholder="Height"
+    />
+    <div
+      style="background-color: whitesmoke; width: 100px; height: 20px; margin-top: 20px;"
+      id="trapDisplay"
+    ></div>
+    <button onclick="trapezium()">Solve</button>
+
+    <!-- g. area of a Parallelogram -->
+    <input
+      style="display: block; margin-top:20px; border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      id="paraLength"
+      placeholder="Length"
+    />
+    <input
+      style="border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      id="paraBreadth"
+      placeholder="Breadth"
+    />
+    <div
+      style="background-color: whitesmoke; width: 100px; height: 20px; margin-top: 20px;"
+      id="paraDisplay"
+    ></div>
+    <button onclick="parallelogram()">Solve</button>
+
+    <!-- h. BMI -->
+    <input
+      style="display: block; margin-top:20px; border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      id="bmiWeight"
+      placeholder="Weight (kg)"
+    />
+    <input
+      style="border: 2px solid red; width: 100px; height: 20px"
+      type="number"
+      id="bmiHeight"
+      placeholder="Height (m)"
+    />
+    <div
+      style="background-color: whitesmoke; width: 100px; height: 20px; margin-top: 20px;"
+      id="bmiDisplay"
+    ></div>
+    <button onclick="bmi()">Solve</button>
+    <!-- <script>
+      function show() {
+        let triHeight, triBase, area, displayAnswer;
+        triHeight = document.getElementById("height").value;
+        triBase = document.getElementById("base").value;
+        area = (1 / 2) * (triHeight * triBase);
+        displayAnswer = document.getElementById("display");
+        displayAnswer.innerHTML = `<p> ${area + "" + "cm^2"} </p>`;
+      }
+
+      function square() {
+        let sqLenght, sqbreath, squareArea, displaySqArea;
+        sqLenght = document.getElementById("lenght").value;
+        sqbreadth = document.getElementById("breath").value;
+        squareArea = sqLenght * sqbreadth;
+        displaySqArea = document.getElementById("squareDisplay");
+        displaySqArea.innerHTML = `<p>${squareArea + "" + "cm^2"}</p>`;
+      }
+
+      function circle() {
+        let r = document.getElementById("circleRadius").value;
+        let area = Math.PI * (r ** 2);
+        document.getElementById("circleDisplay").innerHTML = `<p>${Math.round(area)} cm^2</p>`;
+      }
+
+      function quadrilateral() {
+        let d1 = document.getElementById("quadDiag1").value;
+        let d2 = document.getElementById("quadDiag2").value;
+        let area = (d1 * d2) / 2;
+        document.getElementById("quadDisplay").innerHTML = `<p>${area} cm^2</p>`;
+      }
+
+      function rhombus() {
+        let d1 = document.getElementById("rhomDiag1").value;
+        let d2 = document.getElementById("rhomDiag2").value;
+        let area = (d1 * d2) / 2;
+        document.getElementById("rhomDisplay").innerHTML = `<p>${area} cm^2</p>`;
+      }
+
+      function trapezium() {
+        let top = Number(document.getElementById("trapTop").value);
+        let bottom = Number(document.getElementById("trapBottom").value);
+        let h = Number(document.getElementById("trapHeight").value);
+        
+        let area = ((top + bottom) / 2) * h;
+        document.getElementById("trapDisplay").innerHTML = `<p>${area} cm^2</p>`;
+      }
+
+      function parallelogram() {
+        let length = document.getElementById("paraLength").value;
+        let breadth = document.getElementById("paraBreadth").value;
+        let area = length * breadth;
+        document.getElementById("paraDisplay").innerHTML = `<p>${area} cm^2</p>`;
+      }
+
+      function bmi() {
+        let weight = document.getElementById("bmiWeight").value;
+        let height = document.getElementById("bmiHeight").value;
+        let result = weight / (height ** 2);
+        document.getElementById("bmiDisplay").innerHTML = `<p>${Math.round(result)} kg/m^2</p>`;
+      }
+    </script> -->
+    <script src="script.js"></script>
+  </body>
+</html>
